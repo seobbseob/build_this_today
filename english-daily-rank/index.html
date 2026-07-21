@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>매일 영어 5문제, 오늘의 전국 등수</title>
+<meta name="description" content="영어 5문제 풀면 오늘 전국 등수가 와요. 모의고사를 기다리지 않아도요.">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css">
+<style>
+  * { margin:0; box-sizing:border-box }
+  body { font-family:Pretendard,-apple-system,"Apple SD Gothic Neo",sans-serif; background:#fff; color:#191F28; line-height:1.5 }
+  .wrap { max-width:480px; margin:0 auto; padding:48px 24px 60px }
+  .o { color:#FF5C00 }
+  h1 { font-size:32px; font-weight:800; letter-spacing:-0.5px; line-height:1.35; margin-top:40px }
+  .sub { font-size:17px; color:#8B95A1; font-weight:500; margin-top:14px; line-height:1.6 }
+  .price { font-size:19px; font-weight:800; margin-top:20px }
+  input[type=tel] { width:100%; font-size:17px; padding:16px; border:1.5px solid #E5E7EB; border-radius:14px; outline:none; font-family:inherit }
+  input[type=tel]:focus { border-color:#FF5C00 }
+  button { width:100%; font-size:17px; font-weight:700; padding:16px; margin-top:10px; border:0; border-radius:14px; background:#FF5C00; color:#fff; font-family:inherit; cursor:pointer }
+  button:disabled { opacity:0.5 }
+  .card { background:#fff; border:1px solid #E5E7EB; border-radius:20px; box-shadow:0 8px 24px rgba(25,31,40,0.10); padding:18px 20px }
+  footer { margin-top:56px; font-size:13px; color:#8B95A1 }
+  footer a { color:#8B95A1 }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <div style="font-size:22px;font-weight:800">b<span class="o">_</span></div>
+
+  <h1>영어 5문제 풀면<br>오늘 등수가 <span class="o">와요</span></h1>
+  <div class="sub">모의고사를 기다리지 않아도, 매일 수능 유형 5문제로 오늘의 전국 등수를 알려드려요.</div>
+  <div class="price">월 구독료는 <span class="o">990원</span>이에요</div>
+  <div class="sub" style="margin-top:6px">지금 만들고 있어요. 미리 신청하면 오픈 첫날 바로 시작하고, 출시 소식은 문자로 알려드려요.</div>
+
+  <div style="margin-top:32px">
+    <form id="f">
+      <input type="tel" id="phone" name="phone" placeholder="전화번호 (예: 010-1234-5678)" autocomplete="tel" inputmode="tel" required pattern="01[0-9]-?[0-9]{3,4}-?[0-9]{4}">
+      <button type="submit" id="btn">미리 신청하기</button>
+    </form>
+    <div id="done" style="display:none" class="card">
+      <b>신청 완료!</b>
+      <div style="color:#4E5968;font-size:15px;margin-top:4px">오픈 첫날 시작 자격이 잡혔어요. 월 990원 그대로예요.<br>출시되면 문자로 알려드릴게요.</div>
+    </div>
+    <div style="font-size:12px;color:#8B95A1;margin-top:10px"><b style="color:#4E5968">미리 신청은 무료예요.</b> 결제는 출시 후 시작할 때만 해요.<br>전화번호는 출시 알림에만 사용해요. <a href="../privacy.html" style="color:#8B95A1">개인정보처리방침</a></div>
+  </div>
+
+  <footer>build_this_today · 문의: seobbseob@gmail.com</footer>
+</div>
+
+<script>
+var FORM_ACTION = "https://docs.google.com/forms/d/e/1FAIpQLSePdw5H4W_1Aa4UJH_YwX6y9uBzKF916m9IiFe2SKPFo7m7Hg/formResponse";
+var ENTRY_ID = "entry.1738960401";
+document.getElementById('f').addEventListener('submit', function(e){
+  e.preventDefault();
+  var phone = document.getElementById('phone').value.trim();
+  if(!phone) return;
+  document.getElementById('btn').disabled = true;
+  var data = new FormData();
+  data.append(ENTRY_ID, phone);
+  fetch(FORM_ACTION, {method:'POST', mode:'no-cors', body:data}).finally(function(){
+    document.getElementById('f').style.display = 'none';
+    document.getElementById('done').style.display = 'block';
+  });
+});
+</script>
+</body>
+</html>
