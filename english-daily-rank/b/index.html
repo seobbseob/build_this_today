@@ -3,9 +3,9 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>직장인이라면, 오늘 번 돈이 보여요</title>
-<meta name="description" content="출근하자마자 오늘 번 돈이 실시간으로 보이는 위젯. 월급 한 번 입력하면 끝이에요.">
-<link rel="icon" href="../favicon.svg" type="image/svg+xml">
+<title>자녀의 수능 영어 등수, 매일 알려드려요</title>
+<meta name="description" content="자녀가 매일 수능 영어 5문제를 풀면, 오늘의 전국 등수를 알려드려요. 모의고사 성적표를 기다리지 않아도요.">
+<link rel="icon" href="../../favicon.svg" type="image/svg+xml">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css">
 <style>
   * { margin:0; box-sizing:border-box }
@@ -29,10 +29,10 @@
 
   <div style="font-size:22px;font-weight:800">b<span class="o">_</span></div>
 
-  <h1>직장인이라면<br>오늘 번 돈이 <span class="o">보여요</span></h1>
-  <div class="sub">출근하자마자, 실시간으로요.<br>월급 한 번 입력하면 시급은 자동으로 계산돼요.</div>
-  <div class="price">평생 이용료는 <span class="o">9,900원</span>이에요</div>
-  <div class="sub" style="margin-top:6px">지금 만들고 있어요. 미리 신청하면 출시되면 문자로 알려드려요.</div>
+  <h1>자녀의 영어 등수를<br>매일 <span class="o">알려드려요</span></h1>
+  <div class="sub">자녀가 매일 수능 유형 영어 5문제를 풀면, 오늘의 전국 등수를 리포트로 알려드려요. 모의고사 성적표를 기다리지 않아도요.</div>
+  <div class="price">월 구독료는 <span class="o">990원</span>이에요</div>
+  <div class="sub" style="margin-top:6px">지금 만들고 있어요. 미리 신청하면 오픈 첫날 문자로 알려드려요.</div>
 
   <div style="margin-top:32px">
     <form id="f">
@@ -41,17 +41,17 @@
     </form>
     <div id="done" style="display:none" class="card">
       <b>신청 완료!</b>
-      <div style="color:#4E5968;font-size:15px;margin-top:4px">출시되면 문자로 알려드릴게요.<br>평생 이용료는 9,900원이에요.</div>
+      <div style="color:#4E5968;font-size:15px;margin-top:4px">오픈 첫날 문자로 알려드릴게요.<br>월 구독료는 990원이에요.</div>
     </div>
-    <div style="font-size:12px;color:#8B95A1;margin-top:10px"><b style="color:#4E5968">미리 신청은 무료예요.</b> 결제는 출시 후 시작할 때만 해요.<br>전화번호는 출시 알림에만 사용해요. <a href="../privacy.html" style="color:#8B95A1">개인정보처리방침</a></div>
+    <div style="font-size:12px;color:#8B95A1;margin-top:10px"><b style="color:#4E5968">미리 신청은 무료예요.</b> 결제는 출시 후 시작할 때만 해요.<br>전화번호는 출시 알림에만 사용해요. <a href="../../privacy.html" style="color:#8B95A1">개인정보처리방침</a></div>
   </div>
 
   <footer>build_this_today · 문의: seobbseob@gmail.com</footer>
 </div>
 
 <script>
-var FORM_ACTION = "https://docs.google.com/forms/d/e/1FAIpQLScOBJwB9opS-KKN3e3p-t6XiVnXSGf1kAZL-ZKwTzbhrM0aPg/formResponse";
-var ENTRY_ID = "entry.397256099";
+var FORM_ACTION = "https://docs.google.com/forms/d/e/1FAIpQLSc4ydPW8Oi_cXkm486_Nh2Gyc-mBU6hgj8tSkFFd8Ryu0R9EQ/formResponse";
+var ENTRY_ID = "entry.1660629740";
 document.getElementById('f').addEventListener('submit', function(e){
   e.preventDefault();
   var phone = document.getElementById('phone').value.trim();
